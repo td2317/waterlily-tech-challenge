@@ -14,7 +14,8 @@ At its core, the system has three flows:
 
 I implemented a **full stack solution** with Node.js + TypeScript for the backend and React + Vite for the frontend. The database layer uses SQLite so data persists across restarts, and I styled the UI quickly using TailwindCSS.
 
-**Tech Stack**
+## ⚙️ Tech Stack
+
 - **Backend:** Node.js, Express, TypeScript  
 - **Auth:** JWT + middleware protection  
 - **Validation:** Zod (ensures payloads are correct before hitting the DB)  
@@ -49,7 +50,7 @@ Clone the repo, then run both backend and frontend separately.
 cd waterlily-project
 npm install
 npm run dev
-```
+```bash
 
 •	Runs at http://localhost:3000
 •	Endpoints:
