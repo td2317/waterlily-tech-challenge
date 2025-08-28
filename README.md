@@ -50,7 +50,7 @@ Clone the repo, then run both backend and frontend separately.
 cd waterlily-project
 npm install
 npm run dev
-```bash
+```
 
 •	Runs at http://localhost:3000
 •	Endpoints:
@@ -63,14 +63,17 @@ npm run dev
 
 **Frontend:**
 
+```bash
 cd waterlily-frontend
 npm install
 npm run dev
+```
 
 •	Runs at http://localhost:5173
 •	Talks to the backend via API calls (CORS is enabled).
 
 **Typical Flow to Test**
+
 1.	Register
 
 POST http://localhost:3000/auth/register
