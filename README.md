@@ -59,7 +59,7 @@ npm run dev
 	•	POST /surveys/responses – submit a response (requires JWT)
 	•	GET /surveys/:id/responses – view all responses
 
-** Frontend: **
+**Frontend:**
 
 cd waterlily-frontend
 npm install
@@ -68,7 +68,7 @@ npm run dev
 •	Runs at http://localhost:5173
 •	Talks to the backend via API calls (CORS is enabled).
 
-** Typical Flow to Test **
+**Typical Flow to Test**
 1.	Register
 
 POST http://localhost:3000/auth/register
@@ -81,7 +81,7 @@ POST http://localhost:3000/auth/register
 6.	Submit answers → frontend posts to POST /surveys/responses with { surveyId, answers }.
 7.	Review → frontend shows a summary of what you submitted.
 
-** Challenges & Debugging **
+**Challenges & Debugging**
 
 Along the way I hit a few real-world issues:
 	•	CORS errors – fixed by adding middleware with origin: process.env.CORS_ORIGIN.
@@ -91,7 +91,7 @@ Along the way I hit a few real-world issues:
 
 Each of these mirrors real engineering work: diagnosing errors, finding root causes, and fixing with clean solutions.
 
-** Future Improvements **
+**Future Improvements**
 
 Given more time, here’s what I would add:
 	•	Swap SQLite for Prisma ORM with migrations and relations.
@@ -100,7 +100,7 @@ Given more time, here’s what I would add:
 	•	Improve survey UX (next/previous navigation, progress indicator).
 	•	Deploy backend (Render/Heroku) + frontend (Vercel/Netlify) for live demo.
 
-** Summary **
+**Summary**
 
 This project demonstrates how I approach building a small but complete system under time constraints:
 	•	Start with a clear request flow,
