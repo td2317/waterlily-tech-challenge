@@ -43,7 +43,7 @@ These choices allowed me to cover **all required functionality** end-to-end whil
 
 Clone the repo, then run both backend and frontend separately.
 
-### Backend
+## Backend
 
 ```bash
 cd waterlily-project
