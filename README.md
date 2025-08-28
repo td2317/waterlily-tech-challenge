@@ -52,15 +52,15 @@ npm install
 npm run dev
 ```
 
-•	Runs at http://localhost:3000
-•	Endpoints:
-	•	POST /auth/register – create account
-	•	POST /auth/login – get JWT
-	•	GET /surveys – list all surveys
-	•	GET /surveys/:id – fetch one survey
-	•	POST /surveys/responses – submit a response (requires JWT)
-	•	GET /surveys/:id/responses – view all responses
-
+- Runs at http://localhost:3000  
+- **Endpoints:**
+  - `POST /auth/register` – create account  
+  - `POST /auth/login` – get JWT  
+  - `GET /surveys` – list all surveys  
+  - `GET /surveys/:id` – fetch one survey  
+  - `POST /surveys/responses` – submit a response (requires JWT)  
+  - `GET /surveys/:id/responses` – view all responses
+    
 **Frontend:**
 
 ```bash
@@ -69,8 +69,8 @@ npm install
 npm run dev
 ```
 
-•	Runs at http://localhost:5173
-•	Talks to the backend via API calls (CORS is enabled).
+- Runs at http://localhost:5173  
+- Talks to the backend via API calls (CORS is enabled).  
 
 **Typical Flow to Test**
 
