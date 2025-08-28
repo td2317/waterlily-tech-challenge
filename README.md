@@ -49,6 +49,7 @@ Clone the repo, then run both backend and frontend separately.
 cd waterlily-project
 npm install
 npm run dev
+```
 
 •	Runs at http://localhost:3000
 •	Endpoints:
