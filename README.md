@@ -89,29 +89,50 @@ POST http://localhost:3000/auth/register
 **Challenges & Debugging**
 
 Along the way I hit a few real-world issues:
-	•	CORS errors – fixed by adding middleware with origin: process.env.CORS_ORIGIN.
-	•	401 Unauthorized – caused by missing/incorrect JWT headers. Solved by attaching Authorization: Bearer <token> in the frontend helper.
-	•	204 No Content on submission – page went blank; root cause was not awaiting the API response before navigating. Fixed by handling async properly.
-	•	Strict TypeScript errors – TypeScript required explicit types for survey/response objects; I added inline interfaces and mappings.
+
+- **CORS errors** – fixed by adding middleware with `origin: process.env.CORS_ORIGIN`.  
+- **401 Unauthorized** – caused by missing/incorrect JWT headers. Solved by attaching `Authorization: Bearer <token>` in the frontend helper.  
+- **204 No Content on submission** – page went blank; root cause was not awaiting the API response before navigating. Fixed by handling async properly.  
+- **Strict TypeScript errors** – TypeScript required explicit types for survey/response objects; I added inline interfaces and mappings.  
 
 Each of these mirrors real engineering work: diagnosing errors, finding root causes, and fixing with clean solutions.
 
 **Future Improvements**
 
-Given more time, here’s what I would add:
-	•	Swap SQLite for Prisma ORM with migrations and relations.
-	•	Split frontend into multiple routes (/login, /survey/:id, /review).
-	•	Add form validation (required fields, type checks).
-	•	Improve survey UX (next/previous navigation, progress indicator).
-	•	Deploy backend (Render/Heroku) + frontend (Vercel/Netlify) for live demo.
+If I had extra time beyond the 3-hour build, I would focus on enhancing the survey user experience (UX). The backend and data model are already functional, so the biggest impact now would come from making the survey flow smoother, clearer, and more engaging for end users.
+
+**1. Single-question display + Navigation**
+Instead of showing all questions at once, I would present one question per screen with Next/Previous buttons. This avoids overwhelming users, makes the survey feel lighter, and lays the foundation for features like saving partial progress. The trade-off is extra state management, but the improvement in usability justifies it.
+
+⸻
+
+**2. Progress Indicator**
+I would add a simple progress bar or counter (e.g., “Question 2 of 5”) so users always know how far they’ve come and how much is left. This reduces drop-off by creating a sense of progress and completion. The trade-off is minimal implementation effort with a disproportionately high UX payoff.
+
+⸻
+
+**3. Form Validation**
+Adding client-side checks for required fields and input constraints (e.g., ensuring numeric answers stay within range) would both improve data quality and give users instant feedback instead of failing after submission. This adds extra frontend logic, but correctness and trust are more valuable than raw speed.
+
+⸻
+
+**4. Responsive Design & UI Polish**
+Finally, I would refine the styling with Tailwind’s responsive classes to make the app fully mobile-friendly and improve spacing, layout, and typography. Since many surveys are completed on mobile, responsiveness is critical, though I would prioritize it after functionality improvements since the core flow already works.
+
+⸻
+
+✅ **Why these over others**
+
+I chose to prioritize navigation, progress, and validation because they directly improve completion rates and data accuracy, which are the most important outcomes for any survey tool. UI polish and responsiveness matter, but they enhance perception more than functionality, so I’d implement them last in a real sprint.
 
 **Summary**
 
 This project demonstrates how I approach building a small but complete system under time constraints:
-	•	Start with a clear request flow,
-	•	Make pragmatic trade-offs,
-	•	Get end-to-end functionality working,
-	•	Handle errors thoughtfully,
-	•	Leave room for clear improvements.
+
+- Start with a clear request flow.  
+- Make pragmatic trade-offs.  
+- Get end-to-end functionality working.  
+- Handle errors thoughtfully.  
+- Leave room for clear improvements.  
 
 🌸 Thank you for reviewing my submission!
